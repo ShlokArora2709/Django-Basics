@@ -5,3 +5,6 @@ class Member(models.Model):
     lastname= models.CharField(max_length=255)
     phone = models.IntegerField()
     joined_date = models.DateField(null=True,default='2022-01-01')
+
+    def __str__(self):
+        return f"{self.firstname} {self.lastname}"
